@@ -1,0 +1,2 @@
+#define PHP_GCP_SPANNER_WARMUP_VERSION "0.1"
+
