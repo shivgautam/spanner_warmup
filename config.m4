@@ -3,7 +3,9 @@ PHP_ARG_ENABLE(gcp_spanner_warmup, for spanner warmup support,
 
 if test "$PHP_GCP_SPANNER_WARMUP" != "no"; then
 
-  LIBNAME=libs
+  LIBNAME=php
+  GCP_SPANNER_WARMUP_DIR=/usr/local/lib/php/extensions/no-debug-non-zts-20220829
+
   LIBSYMBOL=php_embed_init
 
   PHP_CHECK_LIBRARY($LIBNAME,$LIBSYMBOL,

@@ -5,7 +5,6 @@
 #include "php.h"
 #include "php_ini.h"
 #include "ext/standard/info.h"
-#include "stdafx.h"
 #include "sapi/embed/php_embed.h"
 #include "gcp_spanner_warmup.h"
 
@@ -21,7 +20,8 @@ PHP_FUNCTION(confirm_gcp_spanner_warmup_compiled)
 
     strg = strpprintf(0, "Extension %.78s loaded into PHP.", "gcp_spanner_warmup", arg);
 
-    RETURN_STR(strg);
+return;
+    // RETURN_STR(strg);
 }
 
 PHP_MINIT_FUNCTION(gcp_spanner_warmup)
@@ -55,7 +55,7 @@ PHP_MINFO_FUNCTION(gcp_spanner_warmup)
 }
 
 const zend_function_entry gcp_spanner_warmup_functions[] = {
-    PHP_FE(confirm_gcp_spanner_warmup_compiled,  NULL)       /* For testing, remove later. */
+    // PHP_FE(confirm_gcp_spanner_warmup_compiled,  NULL)       /* For testing, remove later. */
     PHP_FE_END      /* Must be the last line in gcp_spanner_warmup_functions[] */
 };
 
